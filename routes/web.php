@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+
+Route::resource('products',ProductController::class);
+
+// 詳細表示
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
+
+// 編集画面表示
+Route::get('/products/{id}/edit', [ProductController::class, 'edit'])->name('products.edit');
+
+// 編集処理（更新）
+Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');

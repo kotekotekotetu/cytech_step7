@@ -1,0 +1,32 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+.btn-warning {
+  background-color: #ff8913;
+}
+
+.btn-warning:hover {
+  background-color: #e07b15;
+}
+
+.btn-info {
+  background-color: #00eaff;
+}
+
+.btn-info:hover {
+  background-color: #00c9dc;
+}
+
+.btn-light {
+  border-color: #6e6e6e;
+}
+
+.table-wrapper {
+  max-width: 550px;
+}
